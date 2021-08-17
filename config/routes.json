@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/deployments",
+      "handler": "vercel.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/deployments/:id",
+      "handler": "vercel.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/deploy-staging",
+      "handler": "vercel.deployStaging",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/deploy-production",
+      "handler": "vercel.deployProduction",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": " /staging-site-url",
+      "handler": "vercel.stagingSiteUrl",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/production-site-url",
+      "handler": "vercel.productionSiteUrl",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

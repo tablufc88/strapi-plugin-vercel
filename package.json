@@ -1,0 +1,37 @@
+{
+  "name": "@tablufc88/strapi-plugin-vercel",
+  "version": "1.0.0",
+  "author": "tablufc88",
+  "description": "Plugin to integrate Vercel deploys into Strapi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tablufc88/strapi-plugin-vercel.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tablufc88/strapi-plugin-vercel/issues"
+  },
+  "private": false,
+  "strapi": {
+    "name": "Vercel",
+    "icon": "plug"
+  },
+  "scripts": {
+    "postversion": "git push && git push --tags"
+  },
+  "publishConfig": {
+    "@tablufc88:registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "strapi-helper-plugin": "3.6.6",
+    "strapi-utils": "^3.6.6"
+  },
+  "dependencies": {
+    "@buffetjs/core": "^3.3.8",
+    "@buffetjs/styles": "^3.3.8",
+    "date-fns": "^2.23.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.0"
+  }
+}
