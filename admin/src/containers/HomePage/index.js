@@ -232,7 +232,7 @@ const DeploymentLast = ({ deployment: deploy }) => {
         <div>
           <div className="mb-4">
             <div className="label">DOMAIN</div>
-            <a href={deployment.alias[0]} target="_blank">
+            <a href={`https://${deployment.alias[0]}`} target="_blank">
               {deployment.alias[0]}
             </a>
           </div>
