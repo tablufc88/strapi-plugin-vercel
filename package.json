@@ -1,11 +1,11 @@
 {
-  "name": "@tablufc88/deployments",
+  "name": "@tablufc88/plugin-deployments",
   "version": "2.0.0",
   "author": "tablufc88",
   "description": "Manage Vercel deployments",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tablufc88/strapi-plugin-vercel.git"
+    "url": "git://github.com/tablufc88/strapi-plugin-vercel.git"
   },
   "license": "MIT",
   "bugs": {
@@ -19,7 +19,8 @@
     "@tablufc88:registry": "https://npm.pkg.github.com"
   },
   "strapi": {
-    "name": "Deployments",
+    "name": "deployments",
+    "displayName": "Deployments",
     "description": "Manage Vercel deployments",
     "kind": "plugin"
   },

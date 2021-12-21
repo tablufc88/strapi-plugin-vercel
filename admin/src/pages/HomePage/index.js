@@ -25,7 +25,7 @@ import {
 const HomePage = () => {
   const { error, isLoading, deployments: allDeployments } = useDeployments();
   const [latestDeploy, ...deployments] = allDeployments;
-  const title = pluginPkg.strapi.name;
+  const title = pluginPkg.strapi.displayName;
   const description = pluginPkg.strapi.description;
 
   return (
