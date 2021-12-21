@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { request } from "@strapi/helper-plugin";
+import { useState, useEffect } from "react"
+import { request } from "@strapi/helper-plugin"
 
 /**
  * Get the staging site URL
@@ -10,26 +10,26 @@ const useStagingSiteUrl = () => {
   const [state, setState] = useState({
     error: null,
     isLoading: true,
-    stagingSiteUrl: null,
-  });
+    stagingSiteUrl: null
+  })
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await request("/deployments/get-staging-site-url", {
-          method: "GET",
-        });
-        const stagingSiteUrl = data.url;
-        setState({ error: null, isLoading: false, stagingSiteUrl });
+          method: "GET"
+        })
+        const stagingSiteUrl = data.url
+        setState({ error: null, isLoading: false, stagingSiteUrl })
       } catch (e) {
-        strapi.notification.error("notification.error");
-        setState({ error: e, isLoading: false, stagingSiteUrl: null });
+        strapi.notification.error("notification.error")
+        setState({ error: e, isLoading: false, stagingSiteUrl: null })
       }
-    };
-    fetchData();
-  }, []);
+    }
+    fetchData()
+  }, [])
 
-  return state;
-};
+  return state
+}
 
-export default useStagingSiteUrl;
+export default useStagingSiteUrl

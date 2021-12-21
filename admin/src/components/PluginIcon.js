@@ -4,7 +4,7 @@
  *
  */
 
-import React from "react";
+import React from "react"
 
 const PluginIcon = () => (
   <svg
@@ -15,6 +15,6 @@ const PluginIcon = () => (
   >
     <path d="M 227.996 218 L 264.946 282 L 191.046 282 L 227.996 218 Z" />
   </svg>
-);
+)
 
-export default PluginIcon;
+export default PluginIcon

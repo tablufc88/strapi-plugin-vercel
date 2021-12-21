@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { request } from "@strapi/helper-plugin";
+import { useState, useEffect } from "react"
+import { request } from "@strapi/helper-plugin"
 
 /**
  * Get a single deployment
@@ -11,26 +11,26 @@ const useDeployment = ({ id }) => {
   const [state, setState] = useState({
     error: null,
     isLoading: true,
-    deployment: null,
-  });
+    deployment: null
+  })
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await request(`/deployments/get-deployment/${id}`, {
-          method: "GET",
-        });
-        setState({ isLoading: false, deployment: data, error: null });
+          method: "GET"
+        })
+        setState({ isLoading: false, deployment: data, error: null })
       } catch (e) {
-        strapi.notification.error("notification.error");
-        setState({ isLoading: false, error: e, deployment: null });
+        strapi.notification.error("notification.error")
+        setState({ isLoading: false, error: e, deployment: null })
       }
-    };
+    }
 
-    fetchData();
-  }, []);
+    fetchData()
+  }, [])
 
-  return state;
-};
+  return state
+}
 
-export default useDeployment;
+export default useDeployment

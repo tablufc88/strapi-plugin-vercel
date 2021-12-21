@@ -1,22 +1,22 @@
-import React from "react";
-import { format, formatDistance } from "date-fns";
-import { Box, Flex, Link, Loader, Typography } from "@strapi/design-system";
-import StatusWrapper from "./StatusWrapper";
-import { useDeployment } from "../hooks";
-import styled, { useTheme } from "styled-components";
+import React from "react"
+import { format, formatDistance } from "date-fns"
+import { Box, Flex, Link, Loader, Typography } from "@strapi/design-system"
+import StatusWrapper from "./StatusWrapper"
+import { useDeployment } from "../hooks"
+import styled, { useTheme } from "styled-components"
 
 const ImageWrapper = styled.div`
   ${() => {
-    const theme = useTheme();
+    const theme = useTheme()
     // console.log(theme);
     return `
     width: 400px;
     height: 250px;
     display: block;
     background-color: ${theme.colors.neutral500};
-`;
+`
   }}
-`;
+`
 
 const ErrorBox = styled.div`
   text-align: center;
@@ -26,7 +26,7 @@ const ErrorBox = styled.div`
   line-height: 1.5em;
   height: 100%;
   padding: 1.5em;
-`;
+`
 
 /**
  * Display the last deployment
@@ -35,20 +35,20 @@ const ErrorBox = styled.div`
  * @returns The last deployment along with a screenshot of it etc.
  */
 const DeploymentLast = ({ deployment: deploy }) => {
-  if (!deploy) return <Box>No last deployment found</Box>;
+  if (!deploy) return <Box>No last deployment found</Box>
 
-  const { error, isLoading, deployment } = useDeployment({ id: deploy.uid });
+  const { error, isLoading, deployment } = useDeployment({ id: deploy.uid })
 
   if (isLoading) {
     return (
       <Box padded={5}>
         <Loader small>Loading...</Loader>
       </Box>
-    );
+    )
   }
 
   if (error) {
-    return <Box>Error occured during fetching last deployment</Box>;
+    return <Box>Error occured during fetching last deployment</Box>
   }
 
   return (
@@ -97,7 +97,7 @@ const DeploymentLast = ({ deployment: deploy }) => {
               {deployment.readyState === "READY" &&
                 ` (${formatDistance(new Date(deployment.ready), new Date(), {
                   includeSeconds: true,
-                  addSuffix: true,
+                  addSuffix: true
                 })})`}
             </Typography>
           </Box>
@@ -120,7 +120,7 @@ const DeploymentLast = ({ deployment: deploy }) => {
         </Box>
       </Flex>
     </Box>
-  );
-};
+  )
+}
 
-export default DeploymentLast;
+export default DeploymentLast

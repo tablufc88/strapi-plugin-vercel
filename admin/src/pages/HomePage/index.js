@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo } from "react"
 import {
   Box,
   Flex,
@@ -7,26 +7,26 @@ import {
   Layout,
   HeaderLayout,
   ContentLayout,
-  EmptyStateLayout,
-} from "@strapi/design-system";
-import { Helmet } from "react-helmet";
-import pluginPkg from "../../../../package.json";
-import { LoadingIndicatorPage } from "@strapi/helper-plugin";
-import PluginIcon from "../../components/PluginIcon";
-import { useDeployments } from "../../hooks";
+  EmptyStateLayout
+} from "@strapi/design-system"
+import { Helmet } from "react-helmet"
+import pluginPkg from "../../../../package.json"
+import { LoadingIndicatorPage } from "@strapi/helper-plugin"
+import PluginIcon from "../../components/PluginIcon"
+import { useDeployments } from "../../hooks"
 import {
   DeploymentLast,
   DeploymentList,
   StagingSiteUrl,
   ProductionSiteUrl,
-  DeployButton,
-} from "../../components";
+  DeployButton
+} from "../../components"
 
 const HomePage = () => {
-  const { error, isLoading, deployments: allDeployments } = useDeployments();
-  const [latestDeploy, ...deployments] = allDeployments;
-  const title = pluginPkg.strapi.displayName;
-  const description = pluginPkg.strapi.description;
+  const { error, isLoading, deployments: allDeployments } = useDeployments()
+  const [latestDeploy, ...deployments] = allDeployments
+  const title = pluginPkg.strapi.displayName
+  const description = pluginPkg.strapi.description
 
   return (
     <Layout>
@@ -103,7 +103,7 @@ const HomePage = () => {
         </ContentLayout>
       </Main>
     </Layout>
-  );
-};
+  )
+}
 
-export default memo(HomePage);
+export default memo(HomePage)

@@ -1,5 +1,5 @@
-import React from "react";
-import { formatDistance } from "date-fns";
+import React from "react"
+import { formatDistance } from "date-fns"
 import {
   Table,
   Thead,
@@ -9,9 +9,9 @@ import {
   Th,
   Box,
   Typography,
-  Link,
-} from "@strapi/design-system";
-import StatusWrapper from "./StatusWrapper";
+  Link
+} from "@strapi/design-system"
+import StatusWrapper from "./StatusWrapper"
 
 /**
  * Display a list of deployments
@@ -25,16 +25,16 @@ const DeploymentList = ({ deployments }) => {
       <Box padded={5}>
         <Typography>No deployments yet.</Typography>
       </Box>
-    );
+    )
   }
 
-  const headerItems = ["Date", "URL", "State", "Target"];
+  const headerItems = ["Date", "URL", "State", "Target"]
   return (
     <Box padded={5}>
       <Table rowCount={deployments.length} colCount={4}>
         <Thead>
           <Tr>
-            {headerItems.map((item) => (
+            {headerItems.map(item => (
               <Th key={item}>
                 <Typography variant="sigma">{item}</Typography>
               </Th>
@@ -42,15 +42,15 @@ const DeploymentList = ({ deployments }) => {
           </Tr>
         </Thead>
         <Tbody>
-          {deployments.map((deployment) => {
-            const { uid, created, url, state, target } = deployment;
+          {deployments.map(deployment => {
+            const { uid, created, url, state, target } = deployment
             return (
               <Tr key={uid}>
                 <Td>
                   <Typography variant="pi">
                     {formatDistance(new Date(created), new Date(), {
                       includeSeconds: true,
-                      addSuffix: true,
+                      addSuffix: true
                     })}
                   </Typography>
                 </Td>
@@ -68,12 +68,12 @@ const DeploymentList = ({ deployments }) => {
                   </Typography>
                 </Td>
               </Tr>
-            );
+            )
           })}
         </Tbody>
       </Table>
     </Box>
-  );
-};
+  )
+}
 
-export default DeploymentList;
+export default DeploymentList

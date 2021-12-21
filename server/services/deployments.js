@@ -1,8 +1,8 @@
-"use strict";
-const fetch = require("node-fetch");
+"use strict"
+const fetch = require("node-fetch")
 
 module.exports = ({ strapi }) => {
-  const config = strapi.config.get("plugin.deployments");
+  const config = strapi.config.get("plugin.deployments")
   return {
     async getDeployments() {
       const res = await fetch(
@@ -13,16 +13,16 @@ module.exports = ({ strapi }) => {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${config.token}`,
-          },
+            Authorization: `Bearer ${config.token}`
+          }
         }
-      );
-      const json = await res.json();
+      )
+      const json = await res.json()
       if (json.errors) {
-        console.error(json.errors);
-        throw new Error("Failed to fetch deployments");
+        console.error(json.errors)
+        throw new Error("Failed to fetch deployments")
       }
-      return json.deployments;
+      return json.deployments
     },
     async getDeployment(id) {
       const res = await fetch(
@@ -31,36 +31,36 @@ module.exports = ({ strapi }) => {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${config.token}`,
-          },
+            Authorization: `Bearer ${config.token}`
+          }
         }
-      );
-      const json = await res.json();
+      )
+      const json = await res.json()
       if (json.errors) {
-        console.error(json.errors);
-        throw new Error("Failed to fetch deployment");
+        console.error(json.errors)
+        throw new Error("Failed to fetch deployment")
       }
-      return json;
+      return json
     },
     getStagingSiteUrl() {
-      return { url: config.stagingSiteUrl };
+      return { url: config.stagingSiteUrl }
     },
     getProductionSiteUrl() {
-      return { url: config.productionSiteUrl };
+      return { url: config.productionSiteUrl }
     },
     async deployStaging() {
       const res = await fetch(config.deployStaging, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const json = await res.json();
+          "Content-Type": "application/json"
+        }
+      })
+      const json = await res.json()
       if (json.errors) {
-        console.error(json.errors);
-        throw new Error("Failed to deploy");
+        console.error(json.errors)
+        throw new Error("Failed to deploy")
       } else {
-        return json;
+        return json
       }
     },
 
@@ -68,16 +68,16 @@ module.exports = ({ strapi }) => {
       const res = await fetch(config.deployProduction, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const json = await res.json();
+          "Content-Type": "application/json"
+        }
+      })
+      const json = await res.json()
       if (json.errors) {
-        console.error(json.errors);
-        throw new Error("Failed to deploy");
+        console.error(json.errors)
+        throw new Error("Failed to deploy")
       } else {
-        return json;
+        return json
       }
-    },
-  };
-};
+    }
+  }
+}

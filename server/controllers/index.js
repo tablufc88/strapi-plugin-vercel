@@ -1,7 +1,7 @@
-"use strict";
+"use strict"
 
-const deployments = require("./deployments");
+const deployments = require("./deployments")
 
 module.exports = {
-  deployments,
-};
+  deployments
+}

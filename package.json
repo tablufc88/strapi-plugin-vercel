@@ -13,10 +13,17 @@
   },
   "private": false,
   "scripts": {
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "publishConfig": {
     "@tablufc88:registry": "https://npm.pkg.github.com"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "semi": false,
+    "tabWidth": 2,
+    "trailingComma": "none"
   },
   "strapi": {
     "name": "deployments",
@@ -37,5 +44,8 @@
   "engines": {
     "node": ">=12.x. <=16.x.x",
     "npm": ">=6.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
   }
 }
