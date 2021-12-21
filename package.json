@@ -1,5 +1,5 @@
 {
-  "name": "deployments",
+  "name": "@tablufc88/deployments",
   "version": "2.0.0",
   "author": "tablufc88",
   "description": "Manage Vercel deployments",
