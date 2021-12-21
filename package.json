@@ -1,6 +1,6 @@
 {
   "name": "@tablufc88/plugin-deployments",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "tablufc88",
   "description": "Manage Vercel deployments",
   "repository": {
