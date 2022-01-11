@@ -10,17 +10,17 @@ import {
   EmptyStateLayout
 } from "@strapi/design-system"
 import { Helmet } from "react-helmet"
-import pluginPkg from "../../../../package.json"
+import pluginPkg from "../../../package.json"
 import { LoadingIndicatorPage } from "@strapi/helper-plugin"
-import PluginIcon from "../../components/PluginIcon"
-import { useDeployments } from "../../hooks"
+import { useDeployments } from "../hooks"
 import {
   DeploymentLast,
   DeploymentList,
   StagingSiteUrl,
+  PluginIcon,
   ProductionSiteUrl,
   DeployButton
-} from "../../components"
+} from "../components"
 
 const HomePage = () => {
   const { error, isLoading, deployments: allDeployments } = useDeployments()
