@@ -278,10 +278,10 @@
     compute-scroll-into-view "^1.0.17"
     prop-types "^15.7.2"
 
-"@strapi/helper-plugin@4.0.3":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@strapi/helper-plugin/-/helper-plugin-4.0.3.tgz#87d5bce418371a7a2597eae682700a26f5173fee"
-  integrity sha512-tZtj/+XcJxUiSHMr3mo2k55zcbvjw7Dlqv1zokUkx4U07NwqDW6d9H5XgF+roZfnWeQHaLJutuFZ2yiBk8/I0Q==
+"@strapi/helper-plugin@4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@strapi/helper-plugin/-/helper-plugin-4.0.4.tgz#cac99403b6156a2dcc17f7ac3359275bf2e90cac"
+  integrity sha512-hGcl6sisgAzDJvlM+flomnzf5wI7OW1vMZOTBxgCYGzF8a+TV3FN3aScFdPkqGP0DJzTc6rSot6RmRaRHmCaJQ==
   dependencies:
     "@fortawesome/fontawesome-free" "^5.15.2"
     "@fortawesome/fontawesome-svg-core" "^1.2.35"
@@ -310,10 +310,10 @@
   resolved "https://registry.yarnpkg.com/@strapi/icons/-/icons-0.0.1-alpha.71.tgz#7348673b25964317fd97fbe4bb938e9acab9fb12"
   integrity sha512-fOjcT/shqKZndKwiDI7Y06NXUNzLBAieL/pICrLxKqdYzwo7TguM3rwDxJ7igOtqh/tWDhjqve6FjAqob2yWgA==
 
-"@strapi/utils@4.0.3":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.0.3.tgz#2b975cb6e333bcfc6e78966bacd47bc07f6791e3"
-  integrity sha512-sqB8kJaWebJvVZlkBFcbTlRtpmADBbEC8CR4lvNvLZE4NSdMt3xOvPou9tI0kPm86NE6qwHxc6MJaRaab9h+FQ==
+"@strapi/utils@4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.0.4.tgz#bfb505319d9615b7e47a98d80bdaa09f02b89802"
+  integrity sha512-BZoOv1RexOOgsUoDVrGVM88AKuJvHItl9HguR3MDS2Rpsiiw0dCIggb2xSnXzg6qLnPYpDGi8SWh5QeSet0SSA==
   dependencies:
     "@sindresorhus/slugify" "1.1.0"
     date-fns "2.24.0"
