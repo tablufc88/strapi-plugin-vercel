@@ -11,7 +11,7 @@ export default {
       to: `/plugins/${pluginId}`,
       icon: PluginIcon,
       intlLabel: {
-        id: `${pluginId}.plugin.displayName`,
+        id: `${pluginId}.plugin.name`,
         defaultMessage: name
       },
       Component: async () => {
